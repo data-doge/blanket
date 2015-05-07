@@ -1,16 +1,23 @@
 function Bird () {
   this.$element = $("<div class='bird'></div>");
+  this.speed = 10;
 }
 
 Bird.prototype.render = function () {
   $('body').append(this.$element);
-  var centerY = ($(document).height() - this.$element.height()) / 2;
-  var centerX = ($(document).width() - this.$element.width()) / 2;
   this.$element.offset({
-    top: centerY,
-    left: centerX
+    top: centerY(this.$element),
+    left: centerX(this.$element)
   });
 }
 
-Bird.prototype.move = function () {
+Bird.prototype.twitch = function () {
+  var y = this.$element.offset().top;
+  var x = this.$element.offset().left;
+  var dy = randInt(this.speed);
+  var dx = randInt(this.speed);
+  this.$element.offset({
+    top: (y + dy) % $(document).height(),
+    left: (x + dx) % $(document).width()
+  });
 };
