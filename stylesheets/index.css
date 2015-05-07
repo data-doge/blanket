@@ -1,0 +1,23 @@
+html, body {
+  position: relative;
+  height: 100%;
+}
+
+.dot {
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  border: 0px solid black;
+  border-radius: 200px;
+  background: black;
+}
+
+.bird {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  background-image: url('http://www.allaboutbirds.org/guide/PHOTO/LARGE/northern_cardinal_1.jpg');
+  background-size: cover;
+  border: 0px solid black;
+  border-radius: 200px;
+}
