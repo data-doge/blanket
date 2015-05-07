@@ -7,7 +7,7 @@ function Line () {
 Line.prototype.render = function () {
   $('body').append(this.$element);
   this.$element.css({
-    backgroundColor : randRGB()
+    backgroundColor : randHex()
   });
   this.$element.offset({
     top: centerY(this.$element),

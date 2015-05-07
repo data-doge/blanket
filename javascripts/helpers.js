@@ -14,8 +14,9 @@ function rand8BitInt () {
   return Math.floor(Math.random() * 256);
 }
 
-function randRGB () {
-  return 'rgb(' + rand8BitInt() + ',' + rand8BitInt() + ',' + rand8BitInt() + ')';
+function randHex() {
+  var hexArray = ["#F2385A","#F5A503","#E9F1DF","#4AD9D9","#36B1BF"];
+  return sampleFrom(hexArray);
 }
 
 function sampleFrom (array) {
